@@ -24,10 +24,12 @@ import Privacy from './modals/Privacy';
 import Sponsor from './Sponsors';
 
 import hero from '../images/hero2.jpg';
-import spice from '../images/spice.jpg';
-import spice2 from '../images/spice2.jpeg';
-import spice3 from '../images/spice3.jpg';
+import venue1 from '../images/venue1.jpg';
+import venue2 from '../images/venue2.jpg';
+import venue3 from '../images/venue3.jpg';
 import logo from '../images/logo.png';
+
+import { Carousel } from 'react-responsive-carousel';
 
 
 class Home extends Component {
@@ -95,23 +97,7 @@ const { activeItem } = this.state
 
 {/* Todo: add carousel */}
 
-      <Grid stackable>
-        <Grid.Row columns={1}>
-          <Grid.Column>
-           <Segment basic>
-            <Zoom>
-            <Image 
-              src={logo}
-              centered 
-              alt='Portland Flavor Fest Logo'
-            />
-            </Zoom>
-           </Segment>
-          </Grid.Column>
-        </Grid.Row>
-        
-
-    <Grid.Row columns={1} equal>
+{/* <Grid.Row columns={1} equal>
       <Grid.Column>
 
       <Menu pointing secondary >
@@ -136,15 +122,26 @@ const { activeItem } = this.state
               active={activeItem === 'logout'}
               onClick={this.handleItemClick}
             />
-          {/* <Image 
-            src={require('../images/)}
-            size='large'
-          /> */}
         </Menu.Menu>
       </Menu>
 
       </Grid.Column>
-    </Grid.Row>
+    </Grid.Row>   */}
+
+      <Grid stackable>
+        <Grid.Row columns={1}>
+          <Grid.Column>
+           <Segment basic>
+            <Zoom>
+            <Image 
+              src={logo}
+              centered 
+              alt='Portland Flavor Fest Logo'
+            />
+            </Zoom>
+           </Segment>
+          </Grid.Column>
+        </Grid.Row>
 
 {/* Short about us code follows */}
 
@@ -177,25 +174,37 @@ const { activeItem } = this.state
 
 {/* Why we are different code follows */}
 
-          <Grid.Row columns={1} equal color='black'>
-            {/* <Grid.Column>
+
+
+          <Grid.Row columns={3} equal color='black'>
+
+            <Grid.Column>
               <Segment basic>
               <Image 
                 floated='right'
                 style={styles.hero2} 
-                src={spice3}  
+                src={venue2}  
               />
                </Segment>
-            </Grid.Column> */}
+            </Grid.Column>
               <Grid.Column>
               <Segment basic>
               <Image 
                 // floated='right'
                 style={styles.hero2} 
-                src={spice}  
+                src={venue1}  
               />
               </Segment>
             </Grid.Column>
+            <Grid.Column>
+              <Segment basic>
+              <Image 
+                floated='left'
+                style={styles.hero2} 
+                src={venue3}  
+              />
+               </Segment>
+               </Grid.Column>
             {/* <Grid.Column verticalAlign='middle'>
               <Header as='h1' style={styles.festRed}>Condiment + Food = Condimate</Header>
                 <List bulleted size='big'>
@@ -208,7 +217,9 @@ const { activeItem } = this.state
                 </List>   */}
                   {/* <Button fluid color='orange' as={ Link } to='/employers'>Employers - Find Out More</Button> */}
               {/* </Grid.Column>   */}
-            </Grid.Row>       
+           
+            </Grid.Row>    
+
          
 <Divider/> 
 <Grid.Row columns={1}>
@@ -390,7 +401,7 @@ const styles = {
   //   margin: '0 auto',
   // },
   hero2: {
-    width: '500px',
+    width: '450px',
     height: 'auto',
     margin: '0 auto',
   },
