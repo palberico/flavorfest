@@ -9,10 +9,10 @@ class Navbar extends Component {
       <Menu inverted>
         <Link exact to='/'>
           <Menu.Item header>
-          {/* <Image 
-           src={require('../images/whoop2.png')}
+          <Image 
+           src={require('../images/logo.png')}
            size='large'
-           /> */}
+           />
           </Menu.Item>
         </Link>
         {/* <Link exact to='/about'>

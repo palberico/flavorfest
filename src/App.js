@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-// import About from './components/About';
+import ContactForm from './components/ContactForm';
 import NoMatch from './components/NoMatch';
-// import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Admin from './components/Admin';
-// import Jobs from './components/Jobs';
-// import Courses from './components/Courses';
-// import Employers from './components/Employers';
-// import Unsubscribe from './components/Unsubscribe';
 import PrivateRoute from './PrivateRoutes';
 import { Segment, Loader, Dimmer } from 'semantic-ui-react';
 import firebase from './firebase';
@@ -58,7 +53,7 @@ class App extends Component {
               authenticated={authenticated}
             />
               <Route exact path='/' component={Home} />
-              {/* <Route exact path='/about' component={About} /> */}
+              <Route exact path='/apply' component={ContactForm} />
               <Route exact path='/login' component={Login} />
               <PrivateRoute exact path='/admin' component={Admin} authenticated={this.state.authenticated} />
               {/* <Route exact path='/unsubscribe' component={Unsubscribe} />

@@ -22,8 +22,8 @@ import Contact from './modals/Contact';
 import AboutUs from './modals/AboutUs';
 import Privacy from './modals/Privacy';
 import Sponsor from './Sponsors';
+import ContactForm from './ContactForm';
 
-import hero from '../images/hero2.jpg';
 import venue1 from '../images/venue1.jpg';
 import venue2 from '../images/venue2.jpg';
 import venue3 from '../images/venue3.jpg';
@@ -264,73 +264,6 @@ const { activeItem } = this.state
            
             </Grid.Column>
     </Grid.Row>
-
-{/* Contact form code follow */}
-
-      <Grid.Row columns={1} color='red'>
-        <Grid.Column>
-          <Segment>
-            <Header as='h1' style={styles.festRed} textAlign='center'>Join the Fest!</Header>
-            <Header as='h3' textAlign='center'>We are looking for awesome food and condiment vendors. Fill out the form below and a representative from Flavor Fest will be in touch. </Header>
-            <br />
-          <Form success onSubmit={this.handleSubmit}>
-            <Form.Field>
-              <label>First Name</label>
-                <Form.Input
-                  placeholder='First Name'
-                  onChange={this.handleChange("firstName")} 
-                  value={this.state.firstName}
-                />
-                </Form.Field>
-                <Form.Field>
-                  <label>Last Name</label>
-                    <Form.Input
-                      placeholder='Last Name'
-                      onChange={this.handleChange("lastName")} 
-                      value={this.state.lastName}
-                    />
-                </Form.Field>
-                <Form.Field>
-                  <label>Company</label>
-                    <Form.Input
-                      placeholder='Company Name'
-                      onChange={this.handleChange("company")} 
-                      value={this.state.company}
-                    />
-                </Form.Field>
-                <Form.Field>
-                  <label>Email</label>
-                    <Form.Input
-                      placeholder='email@flavorfest.com'
-                      onChange={this.handleChange("email")} 
-                      value={this.state.email}
-                    />
-                </Form.Field>
-                <Modal 
-                  trigger={<Button onClick={this.handleOpen}>Submit</Button>} 
-                  open={this.state.modalOpen}
-                  onClose={this.handleClose}
-                  basic
-                  size='small'
-                >
-                  <Header icon='thumbs up' content='We got you!' />
-                    <Modal.Content>
-                      <p>
-                        Thank you for submitting your contact information. A representative from Flavor Fest will be in touch shortly!
-                      </p>
-                    </Modal.Content>
-                   <Modal.Actions>
-                   <Link exact to='/'>
-                     <Button color='red' onClick={this.handleClose} inverted>
-                       <Icon name='checkmark' /> Home
-                     </Button>
-                   </Link>
-                   </Modal.Actions>
-                </Modal>
-              </Form>
-              </Segment>
-              </Grid.Column>
-              </Grid.Row>
 
 {/* Footer code follows */}
 

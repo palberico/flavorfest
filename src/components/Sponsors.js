@@ -10,6 +10,8 @@ import thrive from '../images/thrivelogo.png';
 import avila from '../images/avila.png';
 import hoss from '../images/hoss.png';
 
+import Flip from 'react-reveal/Flip';
+
 
 
 
