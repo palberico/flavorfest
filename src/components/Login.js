@@ -8,6 +8,7 @@ import {
   Button,
   Header,
   Message,
+  Container,
 } from "semantic-ui-react";
 import Navbar from './Navbar';
 
@@ -37,11 +38,12 @@ const Login = ({ history }) => {
   }
 
   return (
-    <div>
-    <Navbar />
+    <Container>
+
+    
       <Grid textAlign="center" verticalAlign="middle">
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h1" icon color="orange" textAlign="center">
+          <Header as="h1" icon color="red" textAlign="center">
             Login to Dashboard
           </Header>
           <Form onSubmit={handleLogin} size="large">
@@ -73,7 +75,7 @@ const Login = ({ history }) => {
               <Button 
             //     disabled={loading}
             //     className={loading ? "loading" : ""}
-                color="orange"
+                color="red"
                 fluid
                 size="large"
               >
@@ -90,7 +92,8 @@ const Login = ({ history }) => {
           )} */}
         </Grid.Column>
       </Grid>
-      </div>
+
+      </Container>
     );
   };
   

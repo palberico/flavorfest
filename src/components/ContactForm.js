@@ -100,6 +100,8 @@ class ContactForm extends Component {
       product: '',
       source: '',
       price: '',
+      power: '',
+      requests: '',
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -128,6 +130,8 @@ handleSubmit(e) {
     product: this.state.product,
     source: this.state.source,
     price: this.state.price,
+    power: this.state.power,
+    requests: this.state.requests,
   }
     applicantsRef.push(applicant);
     this.setState({
@@ -148,6 +152,8 @@ handleSubmit(e) {
       product: '',
       source: '',
       price: '',
+      power: '',
+      requests: '',
     });
   }
 
@@ -362,9 +368,9 @@ render() {
                     />
                 </Form.Field>
                 <Form.Field>
-                  <label>Source</label>
+                  <label>Recipes</label>
                     <Form.TextArea
-                      placeholder='Give examples of where you source and/or create your products.'
+                      placeholder='Give us one to two receipe ideas using your product that you will feature at the event.'
                       onChange={this.handleChange("source")} 
                       value={this.state.source}
                     />
@@ -375,6 +381,26 @@ render() {
                       placeholder='Price Range of Goods'
                       onChange={this.handleChange("price")} 
                       value={this.state.price}
+                    />
+                </Form.Field>
+                </Segment>
+
+                <Segment piled>
+                  <Header as='h3'>Show Requests</Header>
+                  <Form.Field>
+                  <label>Power</label>
+                    <Form.TextArea
+                      placeholder='Please identify voltage/amperage if power is required and explain how it is essential to your business.'
+                      onChange={this.handleChange("power")} 
+                      value={this.state.power}
+                    />
+                </Form.Field>
+                <Form.Field>
+                  <label>Special Requests</label>
+                    <Form.Input
+                      placeholder='Please note any special requests. We will do our best to accomodate, but requests are NOT GUARANTEED.'
+                      onChange={this.handleChange("requests")} 
+                      value={this.state.requests}
                     />
                 </Form.Field>
                 </Segment>
@@ -391,7 +417,7 @@ render() {
                   <Header icon='thumbs up' content='We got you!' />
                     <Modal.Content>
                       <p>
-                        Thank you for submitting your contact information. A representative from Flavor Fest will be in touch shortly!
+                        Thank you for submitting your application. A representative from Sense of Taste will be in touch shortly!
                       </p>
                     </Modal.Content>
                    <Modal.Actions>

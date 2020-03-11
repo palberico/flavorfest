@@ -4,6 +4,7 @@ import { Table, Popup, Button, Divider, Header, Container, Segment, Modal } from
 // import Delete from './adminpages/Delete';
 // import JobAdmin from './adminpages/JobAdmin';
 import Navbar from './Navbar';
+import AppCard from './AppCard';
 // import CoursesAdmin from './adminpages/CoursesAdmin';
 // import WhoopAdmin from './adminpages/WhoopAdmin';
 
@@ -55,68 +56,8 @@ class Admin extends Component {
           </Container>
         </Segment>
 
-        <Header as='h1'>Subscribers</Header>
-        <Table celled>
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell>First Name</Table.HeaderCell>
-              <Table.HeaderCell>Last Name</Table.HeaderCell>
-              <Table.HeaderCell>Company</Table.HeaderCell>
-              <Table.HeaderCell>Email Address</Table.HeaderCell>
-            </Table.Row>
-          </Table.Header>
-        {this.state.applicants.map((applicant) => {
+        <AppCard />
         
-    return (
-      <Table.Body key={applicant.id}>
-        <Table.Row>
-          <Table.Cell>{applicant.firstName}</Table.Cell>
-          <Table.Cell>{applicant.lastName}</Table.Cell>
-          <Table.Cell>{applicant.company}</Table.Cell>
-          <Table.Cell>{applicant.email}
-            
-          <Modal size='mini' closeIcon
-              trigger={<Button circular icon='delete' floated='right' color='orange' onClick={this.handleOpen} />}
-              open={this.state.handleOpen}
-              onClose={this.handleClose}>
-            <Modal.Header>Delete Applicant</Modal.Header>
-              <Modal.Content>
-                <p>Are you sure you want to delete this applicant?</p>
-              </Modal.Content>
-                <Modal.Actions>
-                  <Button positive content='BYE!' onClick={() => this.removeApplicant(applicant.id)}/>
-                </Modal.Actions>
-            </Modal>
-
-            {/* <Popup
-                  trigger={<Button circular icon='delete' floated='right' color='orange' onClick={() => this.removeApplicant(applicant.id)} />}
-                  content='Remove Applicant'
-                  hideOnScroll
-                  style={pop}
-                  inverted
-                  position='top right'
-                /> */}
-                
-          </Table.Cell>
-        </Table.Row>
-      </Table.Body>
-      )
-    })}
-      </Table>
-        <Divider />
-      {/* <Delete /> */}
-        <Divider />
-      {/* <JobAdmin /> */}
-        <Divider />
-      {/* <CoursesAdmin /> */}
-        <Divider />
-      {/* <WhoopAdmin /> */}
-        <Divider />  
-      <Segment inverted>
-        <Container>
-          <Button floated="right" color="orange" onClick={() => firebase.auth().signOut()}>Sign Out</Button>
-        </Container>
-      </Segment>
  </div> 
     );
   }

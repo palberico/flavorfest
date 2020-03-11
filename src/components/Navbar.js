@@ -6,18 +6,13 @@ import { Link } from 'react-router-dom';
 class Navbar extends Component {
   render() {
     return (
-      <Menu inverted>
-        <Link exact to='/'>
-          <Menu.Item header>
+      <Menu>
           <Image 
+           as={ Link } exact to='/'
+           centered
            src={require('../images/logo.png')}
            size='large'
-           />
-          </Menu.Item>
-        </Link>
-        {/* <Link exact to='/about'>
-          <Menu.Item as='h3' name='aboutUs'/>
-        </Link> */}
+           /> 
       </Menu>
     )
   }

@@ -42,8 +42,7 @@ class App extends Component {
     }
 
     return (
-      <Segment>
-        <br />
+      
         <AuthProvider>
           <Switch>
             <PrivateRoute
@@ -65,7 +64,7 @@ class App extends Component {
               
           </Switch>
         </AuthProvider>
-      </Segment>
+     
     );
   }
 }

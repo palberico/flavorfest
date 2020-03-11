@@ -17,6 +17,7 @@ import {
   Menu,
 } from 'semantic-ui-react';
 import Zoom from 'react-reveal/Zoom';
+import Reveal from 'react-reveal/Reveal';
 
 import Contact from './modals/Contact';
 import AboutUs from './modals/AboutUs';
@@ -149,31 +150,43 @@ const { activeItem } = this.state
           <Grid.Column>
             <br /><br />
               <Container>
-                <Header as='h1' style={styles.festRed}>What is Flavor Fest?</Header>
+                <Header as='h1' style={styles.festRed}>What is a Sense of Taste?</Header>
                   <Header as='h2'>
-                    Flavor Fest is a flavorful festival of condiments. We are looking
-                    for food and condiment vendors who want to team up and showcase
-                    their products. Give the people what they want. Blah, blah, blah,
-                    Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
-                    Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
+                  Portland is a city of foodies always on a hunt for the next delicious meal.  
+                  We love to support our local food suppliers, farmers markets, restaurants 
+                  and food artisans. A Sense of Taste is a curated event celebrating our local 
+                  food artisans and libation creators in an intimate setting.  Enjoy tasty bites 
+                  of food created by Portland’s finest food artisans and chefs. This event showcases 
+                  and brings to life sauces, condiments, jams, cheeses, charcuterie and drinks all 
+                  in one bite or sip. 
+
                   </Header>
+                  
+                  <Header as='h1' style={styles.festRed}>How it works?</Header>
                   <Header as='h2'>
-                    Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
-                    Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
-                    Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
+                  Due to the size of our hosted space, this event is limited to 150 people and takes 
+                  place over two allotted timeframes, 4-6pm & 6-8pm. During this time, enjoy chef 
+                  demonstrations, tasty bites and libations from over 25 vendors. 
                   </Header>
-                {/* <Button basic fluid color='blue' as={ Link } to='/about'>
-                  Find Out More About Us
-                </Button> */}
               </Container>
               <br /><br />
             </Grid.Column>
           </Grid.Row>
 
       <Divider />
-
+                
+      
 {/* Why we are different code follows */}
+       <Grid.Row color='black' textAlign='center'>
+         <Grid.Column>
+          
+       <Header inverted as='h1'>
+        Universal Standard
 
+        </Header>
+        
+        </Grid.Column>
+       </Grid.Row>
 
 
           <Grid.Row columns={3} equal color='black'>
@@ -184,7 +197,8 @@ const { activeItem } = this.state
                 floated='right'
                 style={styles.hero2} 
                 src={venue2}  
-              />
+                />
+               
                </Segment>
             </Grid.Column>
               <Grid.Column>
@@ -207,14 +221,14 @@ const { activeItem } = this.state
                </Grid.Column>
             {/* <Grid.Column verticalAlign='middle'>
               <Header as='h1' style={styles.festRed}>Condiment + Food = Condimate</Header>
-                <List bulleted size='big'>
-                  <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
-                  <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
-                  <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
-                  <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
-                  <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
-                  <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
-                </List>   */}
+              <List bulleted size='big'>
+              <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
+              <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
+              <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
+              <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
+              <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
+              <List.Item>Blah, blah, blah, blah, blah, blah...</List.Item>
+            </List>   */}
                   {/* <Button fluid color='orange' as={ Link } to='/employers'>Employers - Find Out More</Button> */}
               {/* </Grid.Column>   */}
            
@@ -227,22 +241,30 @@ const { activeItem } = this.state
         <Segment style={{ padding: '3em 0em' }} vertical>
       <Container text>
         <Header as='h3' style={{ fontSize: '2em' }}>
-        Condiment + Food = Condimate
+        The Event Space
 
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
-          Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
-          Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
+        This event will be held at Universal Standard in NE Portland. Universal Standard 
+        is fashion and personal styling studio offering beautifully designed clothing 
+        from size 00-4XL. We welcome and encourage you to explore the Universal Standard 
+        clothing collection and sign up for an appointment with your very own stylist during 
+        the evening.
         </p>
         <p style={{ fontSize: '1.33em' }}>
-          Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
-          Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
-          Blah, blah, blah, Blah, blah, blah, Blah, blah, blah, Blah, blah, blah,
+        Do you have a Sense of Taste? If so, get your tickets before they're gone! 
+
         </p>
-        {/* <Button as='a' size='large'>
-          <Contact />
-        </Button> */}
+        
+        <Button.Group centered>
+        <Button as={ Link } to='/apply' size='large' color='red'>
+          Vendors Apply
+        </Button>
+        <Button.Or />
+        <Button as={ Link } to='/apply' size='large' color='red'>
+          Get Tickets
+        </Button>
+        </Button.Group>
         <Divider
           as='h4'
           className='header'
